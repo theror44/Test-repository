@@ -9,13 +9,11 @@ foreach ($aFiles as $strInput => $aFileData) {
 	$strTmpName = $config["temp"].md5_file($aFileData["tmp_name"]).".".CFileUtil::GetExtension($aFileData["name"]);
 	move_uploaded_file($aFileData["tmp_name"], $strTmpName);
 	$aFiles[$strInput]["tmp_name"] = $strTmpName;
-}
-
-session_start();
+}sdfsdfsession_start();sdf
 $_SESSION["FILES"] = $aFiles;
-session_write_close();
+session_write_close();sdfsdf
 
-/*	Copie des fichiers upload�s vers un r�pertoire temporaire afin de la rendre accessible � la session
+/*	Copie des fichiers upload�s vers un r�pertoire temporaire afin dedfsdfsdfs la rendre accessible � la session
  d'une autre page appel�e parall�lement. Cette page est appel� parall�lement � un appel AJAX afin de rendre
  accessible les fichiers upload�s � la requ�te AJAX.
  Les fichiers temporaires PHP �tant supprim�s � la fin du traitement de cette page, on effectue une simulation
